@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> 前端页面 </title>
+</head>
+
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+
+<body>
+
+<div class="container">
+<!-- -->
+    <div class="jumbotron">
+        <h1>基于机器学习的智慧医疗诊断系统</h1>
+        <h1>Demo演示（高血压病人识别）</h1>
+    </div>
+<!-- -->
+<div class="row">
+  <div class="col-md-8">
+<!-- -->
+<div class="panel panel-primary">
+	<div class="panel-heading">
+	  <h1 class="panel-title">识别结果</h1>
+	</div>
+	<div id="showArea" class="panel-body">
+    <!-- 识别结果展示区 -->
+	</div>
+</div>
+<!-- -->
+  </div>
+<!-- -->
+</div>
+
+<div class="container">
+  <form class="form-horizontal" action="/get/result" method="POST">
+      <div id="legend" class="">
+        <legend class="">医疗数据输入端</legend>
+      </div>
+  </form>
+
+<!-- -->
+<table class="table table-striped">
+    <thead>
+    <tr>
+{% for i in data_list %}
+        <th>Student-ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Grade</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>003</td>
+        <td>Rabindranath</td>
+        <td>Sen</td>
+        <td>A+</td>
+    </tr>
+    </tbody>
+</table>
+{% endfor %}
+<!-- -->
+</div>
+
+</body>
+</html>
